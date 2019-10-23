@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.solanki.sahil.gojek.ui.home.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mainFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_mainFragment_to_failureFragment"
+            app:destination="@id/failureFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mainFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/failureFragment"
+        android:name="com.solanki.sahil.gojek.ui.failure.FailureFragment"
+        android:label="failure_fragment"
+        tools:layout="@layout/failure_fragment" >
+        <action
+            android:id="@+id/action_failureFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/failureFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.solanki.sahil.gojek.ui.success.SuccessFragment"
+        android:label="success_fragment"
+        tools:layout="@layout/success_fragment">
+
+        <argument android:name="response"
+            app:argType="string"
+            android:defaultValue="None"/>
+        />
+    </fragment>
+
+
+</navigation>

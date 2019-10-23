@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?> <?xml-stylesheet type="text/xsl" href="sms.xsl"?>
+<TEMPS>
+
+    <Temp   number = "24 C" count = "1"/>
+    <Temp   number = "21 C" count = "2"/>
+    <Temp   number = "28 C" count = "3"/>
+    <Temp   number = "26 C" count = "4"/>
+
+</TEMPS>
+
